@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.paint.RadialGradient?>
+<?import javafx.scene.paint.Stop?>
+<?import javafx.scene.text.Font?>
+
+<BorderPane xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="FXht.AloitusIkkunaController">
+   <top>
+      <MenuBar prefHeight="25.0" prefWidth="333.0" BorderPane.alignment="CENTER">
+        <menus>
+          <Menu mnemonicParsing="false" text="Apua">
+            <items>
+              <MenuItem mnemonicParsing="false" onAction="#handleApua" text="Apua" />
+                  <MenuItem mnemonicParsing="false" onAction="#handleTietoja" text="Tietoja..." />
+            </items>
+          </Menu>
+        </menus>
+      </MenuBar>
+   </top>
+   <center>
+      <Pane BorderPane.alignment="CENTER">
+         <children>
+            <ImageView fitHeight="262.0" fitWidth="336.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../kuvat/pilvi.png" />
+               </image>
+            </ImageView>
+            <Label alignment="TOP_CENTER" layoutX="6.0" layoutY="14.0" prefHeight="72.0" prefWidth="327.0" text="WeatherTracker" textAlignment="CENTER">
+               <font>
+                  <Font name="Andalus" size="45.0" />
+               </font>
+               <textFill>
+                  <RadialGradient centerX="0.5" centerY="0.5" radius="0.5">
+                     <stops>
+                        <Stop color="#1a6c8d" />
+                        <Stop color="WHITE" offset="1.0" />
+                     </stops>
+                  </RadialGradient>
+               </textFill>
+            </Label>
+            <Button fx:id="textCancel" layoutX="238.0" layoutY="213.0" mnemonicParsing="false" onAction="#handleLopeta" text="Lopeta" />
+            <Button fx:id="textAvaa" layoutX="161.0" layoutY="213.0" mnemonicParsing="false" onAction="#handleAloita" text="Aloita" />
+         </children>
+      </Pane>
+   </center>
+</BorderPane>
